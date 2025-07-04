@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  font-family: 'Poppins', serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+body {
+  width: 100dvw;
+  overflow-x: hidden;
+  margin: 0;
+  background-color: #F9FAFF;
+}
+
+.sponsors-container-1{
+  animation: translateForward 3s ease-in-out 3s infinite alternate;
+}
+.sponsors-container-2{
+  animation: translateBackward 3s ease-in-out 3s infinite alternate;
+}
+.play-button{
+  animation: pulse 3s ease-in-out 0s infinite forwards;
+}
+
+@keyframes translateForward{
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(100px);
+  }
+}
+@keyframes translateBackward{
+  0%{
+    transform: translateX(100px);
+  }
+  100%{
+    transform: translateX(0px);
+  }
+}
+@keyframes pulse{
+  0%{
+    border: 1px solid #80D727;
+  }
+  100%{
+    border: 5px solid #80D727;
+  }
+}
+
+@keyframes typing {
+  0% {
+    content: "";
+  }
+  25% {
+    content: ".";
+  }
+  50% {
+    content: "..";
+  }
+  75% {
+    content: "...";
+  }
+  100% {
+    content: "";
+  }
+}
+
+.typing-animation::after {
+  content: "";
+  animation: typing 1.5s infinite;
+}
+
+/* Custom scrollbar styles */
+.overflow-y-auto::-webkit-scrollbar {
+  width: 6px;
+}
+
+.overflow-y-auto::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.overflow-y-auto::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+
+.overflow-y-auto::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
